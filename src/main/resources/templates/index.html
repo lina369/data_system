@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>数据结构知识点管理系统</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css" />
+    <link type="text/css" rel="stylesheet" href="assets/css/layui.css"/>
+    <link type="text/css" rel="stylesheet" href="welcome/css/styles.css"/>
+    <script type="text/javascript" src="welcome/js/jquery.min.js"></script>
+    <script type="text/javascript" src="welcome/js/menu.js"></script>
+    <script type="text/javascript" src="welcome/js/base.js"></script>
+    <script type="text/javascript" src="welcome/js/index.js"></script>
+
+    <!-- layer插件 -->
+    <script type="text/javascript" language="javascript" src="welcome/js/layer.js"></script>
+    <script type="text/javascript" language="javascript" src="welcome/js/layerOps.js"></script>
+
+    <link href="welcome/css/sweetalert.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="welcome/js/sweetalert.min.js"></script>
+</head>
+<body>
+<div id="header">
+    <div class="logo">数据结构知识点管理系统 </div>
+</div>
+<div id="content">
+    <div class="left_menu">
+        <ul id="nav_dot">
+            <li class="li1">
+                <h4 class=“M7”><span></span>用户管理</h4>
+                <div class="list-item none">
+                    <a th:href="@{/gotomanage}">用户管理</a>
+                </div>
+            </li>
+            <li class="li2">
+                <h4 class="M3"><span></span>知识点管理</h4>
+                <div class="list-item none">
+                    <a th:href="@{/goto1}" target="mainbody">线性表</a>
+                    <a th:href="@{/goto2}" target="mainbody">栈和队列</a>
+                    <a th:href="@{/goto3}" target="mainbody">串</a>
+                    <a th:href="@{/goto4}" target="mainbody">树</a>
+                    <a th:href="@{/goto5}" target="mainbody">图</a>
+                    <a th:href="@{/goto6}" target="mainbody">排序</a>
+                    <a th:href="@{/goto7}" target="mainbody">查找</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="m-right">
+        <div class="right-nav">
+            <ul>
+                <li class="li3" ><a href="">退出登录</a></li>
+                <li class="li4"><a th:href="@{/goreg}">修改密码</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="img" style="background-image: url('welcome/images/123.jpg');">
+        <div></div>
+    </div>
+</div>
+<div id="footer"><p>数据结构知识点管理系统</p></div>
+<script>navList(12);</script>
+</body>
+</html>

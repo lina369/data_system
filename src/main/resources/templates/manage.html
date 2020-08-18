@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>用户管理</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="assets/css/layui.css"/>
+    <link type="text/css" rel="stylesheet" href="welcome/css/styles.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css" />
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+
+
+    <!-- layer插件 -->
+    <script type="text/javascript" language="javascript" src="welcome/js/layer.js"></script>
+    <script type="text/javascript" language="javascript" src="welcome/js/layerOps.js"></script>
+
+    <link href="welcome/css/sweetalert.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="welcome/js/sweetalert.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="welcome/css/validformstyle.css"/>
+    <script type="text/javascript" src="welcome/js/Validform.min.js"></script>
+    <script type="text/javascript" language="javascript" src="welcome/js/base.js"></script>
+    <script type="text/javascript" language="javascript" src="welcome/js/layout.js"></script>
+
+</head>
+<body>
+<div id="container">
+    <form class="form-inline search-form" id="sensor-search-form" action="/adduser" method="post">
+        <div class="form-group">
+            <input class="form-control" type="username" name="username" placeholder="用户名">
+        </div>
+        <div class="form-group">
+            <input class="form-control" type="password" name="password" placeholder="密码">
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-default"><span class="icon-search"></span> 新增用户</button>
+        </div>
+        <!--<div class="form-group">-->
+        <!--<button type="button" class="btn btn-success" id="sensor_add"><span class="icon-plus"></span> 新增传感器</button>-->
+        <!--</div>-->
+    </form>
+    <h2 th:utext="${msg4}"></h2>
+    <form class="form-inline search-form" id="sensor-search-form" action="/updateuser" method="post">
+        <div class="form-group">
+            <input class="form-control" type="username" name="username" placeholder="用户名">
+        </div>
+        <div class="form-group">
+            <input class="form-control" type="password" name="password" placeholder="密码">
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-default"><span class="icon-search"></span> 更新用户</button>
+        </div>
+        <!--<div class="form-group">-->
+        <!--<button type="button" class="btn btn-success" id="sensor_add"><span class="icon-plus"></span> 新增传感器</button>-->
+        <!--</div>-->
+    </form>
+    <h2 th:utext="${msg5}"></h2>
+    <form class="form-inline search-form" id="sensor-search-form" action="/deleteuser" method="post">
+        <div class="form-group">
+            <input class="form-control" type="username" name="username" placeholder="用户名">
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-default"><span class="icon-search"></span> 删除用户</button>
+        </div>
+        <!--<div class="form-group">-->
+        <!--<button type="button" class="btn btn-success" id="sensor_add"><span class="icon-plus"></span> 新增传感器</button>-->
+        <!--</div>-->
+    </form>
+    <h2 th:utext="${msg6}"></h2>
+    <div class="form-group">
+        <form action="/manage">
+            <button type="submit" class="btn btn-default"><span class="icon-search"></span> 返回主页</button>
+        </form>
+    </div>
+    <hr class="my-hr">
+</div>
+
+</body>
+</html>
